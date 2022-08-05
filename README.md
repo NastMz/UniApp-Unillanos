@@ -1,5 +1,14 @@
 # UniApp-Unillanos
 
+- [Resumen](#resumen)
+- [Requerimiento funcional priorizado](#requerimiento-funcional-que-se-prioriza)
+- [Metodología](#metodologia-seleccionada)
+- [Roles](#roles-y-rotacion-de-los-mismos)
+  * [Primera semana](#primera-semana)
+  * [Segunda semana](#segunda-semana)
+  * [Tercera semana](#tercera-semana)
+  * [Cuarta semana](#cuarta-semana)
+
 ## Resumen
 
 UniApp Unillanos es una aplicación móvil que tiene el fin de brindar información a los estudiantes de la Universidad de los Llanos sobre temas como las rutas y novedades que se informen en la red social “Facebook” sobre las mismas. Esto con el fin de ayudar a la comunidad universitaria a tener una información completa de forma practica y rápida.  
