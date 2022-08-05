@@ -15,25 +15,25 @@ La metodología que seleccionamos para el desarrollo...
 ## Roles y rotación de los mismos
 
 ### Primera semana:
-Kevin Martínez: Desarrollador
-Pablo Bobadilla: Desarrollador
-Mateo Granada: Desarrollador
-Camilo Tejeiro: Desarrollador
+- Kevin Martínez: Desarrollador
+- Pablo Bobadilla: Desarrollador
+- Mateo Granada: Desarrollador
+- Camilo Tejeiro: Desarrollador
 
 ### Segunda Semana:
-Kevin Martínez: QA/Pruebas
-Pablo Bobadilla: QA/Pruebas
-Mateo Granada: Desarrollador
-Camilo Tejeiro: Desarrollador 
+- Kevin Martínez: QA/Pruebas
+- Pablo Bobadilla: QA/Pruebas
+- Mateo Granada: Desarrollador
+- Camilo Tejeiro: Desarrollador 
 
 ### Tercera Semana:
-Kevin Martínez: Desarrollador
-Pablo Bobadilla: Desarrollador
-Mateo Granada: QA/Pruebas
-Camilo Tejeiro: QA/Pruebas
+- Kevin Martínez: Desarrollador
+- Pablo Bobadilla: Desarrollador
+- Mateo Granada: QA/Pruebas
+- Camilo Tejeiro: QA/Pruebas
 
 ### Cuarta Semana:
-Kevin Martínez: Desarrollador
-Pablo Bobadilla: QA/Pruebas
-Mateo Granada: Desarrollador
-Camilo Tejeiro: QA/Pruebas
+- Kevin Martínez: Desarrollador
+- Pablo Bobadilla: QA/Pruebas
+- Mateo Granada: Desarrollador
+- Camilo Tejeiro: QA/Pruebas
