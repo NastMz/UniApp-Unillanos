@@ -1,10 +1,23 @@
+import sched
+import time
+
 from flask import Flask
 
 from config import config
 # Routes
+from models.PostModel import PostModel
 from routes import Stop, Post
 
 app = Flask(__name__)
+
+s = sched.scheduler(time.time, time.sleep)
+
+t = 600
+
+
+def find_post(sc):
+    PostModel().save_posts()
+    sc.enter(t, 1, find_post, (sc,))
 
 
 def page_not_found(error):
@@ -12,6 +25,9 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
+    s.enter(t, 1, find_post, (s,))
+    s.run()
+
     app.config.from_object(config['development'])
 
     # Blueprints
