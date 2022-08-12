@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="87.527748mm"
+   height="87.45105mm"
+   viewBox="0 0 87.527748 87.45105"
+   version="1.1"
+   id="svg3255"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="news_icon.svg">
+  <defs
+     id="defs3249">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3984">
+      <stop
+         style="stop-color:#f32112;stop-opacity:1"
+         offset="0"
+         id="stop3980" />
+      <stop
+         style="stop-color:#961323;stop-opacity:0.99607843"
+         offset="1"
+         id="stop3982" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect3922"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Utilice la regla de relleno parimpar en el diálogo &lt;b&gt;Relleno y borde&lt;/b&gt; si el resultado no está aplanada después de convertir el recorte en trayectos." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6406">
+      <g
+         id="g6412"
+         style="display:block">
+        <path
+           style="fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 59.333833,106.90781 42.763127,-21.381563 42.22858,21.916103 -8.55262,6.41447 c 0,0 -28.33057,-25.123339 -66.282844,0 z"
+           id="path6408" />
+        <path
+           style="mix-blend-mode:normal;fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 73.610863,127.47247 v -9.92188 c 0,0 26.741817,-18.898806 56.318447,0.56697 l 1e-5,9.35491 c 0,0 -18.80432,-3.68527 -27.30878,4.8192 0,0 -9.449409,-10.29986 -29.009677,-4.8192 z"
+           id="path6410" />
+      </g>
+    </clipPath>
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect6414"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Utilice la regla de relleno parimpar en el diálogo &lt;b&gt;Relleno y borde&lt;/b&gt; si el resultado no está aplanada después de convertir el recorte en trayectos." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6406-1">
+      <g
+         id="g6412-2"
+         style="display:none">
+        <path
+           style="fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 59.333833,106.90781 42.763127,-21.381563 42.22858,21.916103 -8.55262,6.41447 c 0,0 -28.33057,-25.123339 -66.282844,0 z"
+           id="path6408-4" />
+        <path
+           style="mix-blend-mode:normal;fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 73.610863,127.47247 v -9.92188 c 0,0 26.741817,-18.898806 56.318447,0.56697 l 1e-5,9.35491 c 0,0 -18.80432,-3.68527 -27.30878,4.8192 0,0 -9.449409,-10.29986 -29.009677,-4.8192 z"
+           id="path6410-7" />
+      </g>
+      <path
+         id="lpe_path-effect6414"
+         class="powerclip"
+         d="M 41.478012,43.518584 H 160.6186 V 192.62321 H 41.478012 Z m 17.855821,63.389226 10.156243,6.94901 c 37.952274,-25.123339 66.282844,0 66.282844,0 l 8.55262,-6.41447 -42.22858,-21.916103 z m 14.27703,20.56466 c 19.560268,-5.48066 29.009677,4.8192 29.009677,4.8192 8.50446,-8.50447 27.30878,-4.8192 27.30878,-4.8192 l -1e-5,-9.35491 C 100.35268,98.651784 73.610863,117.55059 73.610863,117.55059 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect3922">
+      <g
+         id="g3928"
+         style="display:block">
+        <path
+           style="fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 59.333833,106.90781 42.763127,-21.381563 42.22858,21.916103 -8.55262,6.41447 c 0,0 -28.33057,-25.123339 -66.282844,0 z"
+           id="path3924" />
+        <path
+           style="mix-blend-mode:normal;fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 73.610863,127.47247 v -9.92188 c 0,0 26.741817,-18.898806 56.318447,0.56697 l 1e-5,9.35491 c 0,0 -18.80432,-3.68527 -27.30878,4.8192 0,0 -9.449409,-10.29986 -29.009677,-4.8192 z"
+           id="path3926" />
+      </g>
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3984"
+       id="linearGradient1604"
+       gradientUnits="userSpaceOnUse"
+       x1="59.219112"
+       y1="111.02688"
+       x2="160.89626"
+       y2="111.71867"
+       gradientTransform="matrix(3.7795276,0,0,3.7795276,-250.08421,-261.03519)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="212.90618"
+     inkscape:cy="177.9825"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1298"
+     inkscape:window-height="720"
+     inkscape:window-x="1412"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3252">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Capa 1"
+     transform="translate(-66.168113,-69.065562)">
+    <path
+       id="path3933"
+       style="fill:url(#linearGradient1604);fill-opacity:1;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 130.86523 0.50195312 C 121.84652 0.60163069 111.21595 5.1714892 113.82227 27.363281 L 299.43945 214.74609 C 297.82964 215.81971 335.34294 229.01967 329.74414 190.50391 C 331.52093 189.61553 140.69661 0.61733694 142.35938 2.3613281 C 142.4515 2.4579529 137.03593 0.43375269 130.86523 0.50195312 z M 111.29883 48.576172 L 41.091797 224.5957 L 107.25781 290.75977 L 280.75 219.29297 L 111.29883 48.576172 z M 29.474609 236.21289 C -0.62970559 243.62439 1.6309579 249.78448 0.68554688 250.85938 L 80.236328 329.9043 C 89.327706 324.85356 94.376953 300.60938 94.376953 300.60938 L 29.474609 236.21289 z M 255 248.45312 C 254.56074 248.4535 254.12566 248.48114 253.69531 248.52734 C 250.8268 248.83545 247.72438 250.06262 246.15625 252.27148 C 244.33323 254.83952 244.10636 258.62074 244.13281 258.43555 C 245.22048 259.8856 244.16495 261.52215 244.19141 263.23242 C 244.23283 266.06295 244.03507 269.60066 242.79883 272.31641 C 240.61914 277.10461 236.80859 280.40625 236.80859 280.40625 L 179.98828 303.89258 C 176.68822 303.48008 172.3352 302.77146 168.63867 300.58398 C 163.28312 297.41474 159.02734 292.5293 159.02734 292.5293 C 157.20799 291.64111 155.31809 290.29946 153.8457 289.96875 C 141.37957 287.16914 141.04343 303.1731 142.86523 303.64062 C 154.98705 328.89441 187.3125 322.83203 187.3125 322.83203 L 251.96094 295.55859 C 270.09315 277.79001 264.09332 256.16074 265.3457 255.91016 C 261.39493 249.81116 258.07485 248.4505 255 248.45312 z "
+       transform="matrix(0.26458333,0,0,0.26458333,66.168113,69.065562)" />
+  </g>
+</svg>

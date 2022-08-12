@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="73.332977mm"
+   height="72.697372mm"
+   viewBox="0 0 73.332977 72.697372"
+   version="1.1"
+   id="svg3255"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="about_icon_bg.svg">
+  <defs
+     id="defs3249">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient874">
+      <stop
+         style="stop-color:#999999;stop-opacity:1"
+         offset="0"
+         id="stop870" />
+      <stop
+         style="stop-color:#4d4d4d;stop-opacity:0.99607843"
+         offset="1"
+         id="stop872" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect3922"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Utilice la regla de relleno parimpar en el diálogo &lt;b&gt;Relleno y borde&lt;/b&gt; si el resultado no está aplanada después de convertir el recorte en trayectos." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6406">
+      <g
+         id="g6412"
+         style="display:block">
+        <path
+           style="fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 59.333833,106.90781 42.763127,-21.381563 42.22858,21.916103 -8.55262,6.41447 c 0,0 -28.33057,-25.123339 -66.282844,0 z"
+           id="path6408" />
+        <path
+           style="mix-blend-mode:normal;fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 73.610863,127.47247 v -9.92188 c 0,0 26.741817,-18.898806 56.318447,0.56697 l 1e-5,9.35491 c 0,0 -18.80432,-3.68527 -27.30878,4.8192 0,0 -9.449409,-10.29986 -29.009677,-4.8192 z"
+           id="path6410" />
+      </g>
+    </clipPath>
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect6414"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Utilice la regla de relleno parimpar en el diálogo &lt;b&gt;Relleno y borde&lt;/b&gt; si el resultado no está aplanada después de convertir el recorte en trayectos." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6406-1">
+      <g
+         id="g6412-2"
+         style="display:none">
+        <path
+           style="fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 59.333833,106.90781 42.763127,-21.381563 42.22858,21.916103 -8.55262,6.41447 c 0,0 -28.33057,-25.123339 -66.282844,0 z"
+           id="path6408-4" />
+        <path
+           style="mix-blend-mode:normal;fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 73.610863,127.47247 v -9.92188 c 0,0 26.741817,-18.898806 56.318447,0.56697 l 1e-5,9.35491 c 0,0 -18.80432,-3.68527 -27.30878,4.8192 0,0 -9.449409,-10.29986 -29.009677,-4.8192 z"
+           id="path6410-7" />
+      </g>
+      <path
+         id="lpe_path-effect6414"
+         class="powerclip"
+         d="M 41.478012,43.518584 H 160.6186 V 192.62321 H 41.478012 Z m 17.855821,63.389226 10.156243,6.94901 c 37.952274,-25.123339 66.282844,0 66.282844,0 l 8.55262,-6.41447 -42.22858,-21.916103 z m 14.27703,20.56466 c 19.560268,-5.48066 29.009677,4.8192 29.009677,4.8192 8.50446,-8.50447 27.30878,-4.8192 27.30878,-4.8192 l -1e-5,-9.35491 C 100.35268,98.651784 73.610863,117.55059 73.610863,117.55059 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect3922">
+      <g
+         id="g3928"
+         style="display:block">
+        <path
+           style="fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 59.333833,106.90781 42.763127,-21.381563 42.22858,21.916103 -8.55262,6.41447 c 0,0 -28.33057,-25.123339 -66.282844,0 z"
+           id="path3924" />
+        <path
+           style="mix-blend-mode:normal;fill:#f32112;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 73.610863,127.47247 v -9.92188 c 0,0 26.741817,-18.898806 56.318447,0.56697 l 1e-5,9.35491 c 0,0 -18.80432,-3.68527 -27.30878,4.8192 0,0 -9.449409,-10.29986 -29.009677,-4.8192 z"
+           id="path3926" />
+      </g>
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient874"
+       id="linearGradient876"
+       x1="70.53093"
+       y1="113.52144"
+       x2="146.97002"
+       y2="113.52144"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.97643319,0,0,1,2.7438651,-1.8430958e-7)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="131.01372"
+     inkscape:cy="197.59642"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="1352"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3252">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Capa 1"
+     transform="translate(-72.134545,-77.974591)"
+     style="display:inline">
+    <g
+       id="g919" />
+    <path
+       id="path866"
+       style="opacity:0.999;fill:url(#linearGradient876);fill-opacity:1;stroke:none;stroke-width:0.221334"
+       d="m 108.80078,77.974591 a 36.666399,36.348651 0 0 0 -36.666235,36.348689 36.666399,36.348651 0 0 0 36.666235,36.34868 36.666399,36.348651 0 0 0 36.66674,-36.34868 36.666399,36.348651 0 0 0 -36.66674,-36.348689 z m -0.12514,9.621635 a 6.2633003,6.2808336 0 0 1 6.26343,6.280753 6.2633003,6.2808336 0 0 1 -6.26343,6.280751 6.2633003,6.2808336 0 0 1 -6.26342,-6.280751 6.2633003,6.2808336 0 0 1 6.26342,-6.280753 z m -0.0641,15.271414 a 6.2633003,6.2808336 0 0 1 0.0535,0 6.2633003,6.2808336 0 0 1 6.24829,5.84306 h 0.0202 v 25.48061 a 6.2633003,6.2808336 0 0 1 0.0318,0.63097 6.2633003,6.2808336 0 0 1 -6.26343,6.28076 6.2633003,6.2808336 0 0 1 -6.26242,-6.20014 h -0.0323 v -25.50077 a 6.2633003,6.2808336 0 0 1 -0.005,-0.25373 6.2633003,6.2808336 0 0 1 0.005,-0.25167 v -0.18603 h 0.0101 a 6.2633003,6.2808336 0 0 1 6.1943,-5.84306 z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Capa 3"
+     style="display:inline"
+     transform="translate(-1.069078)" />
+</svg>
