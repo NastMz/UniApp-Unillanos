@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:uniapp/widgets/NavBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,20 +19,31 @@ class _State extends State<MyApp> {
     return MaterialApp(
         title: "UniApp Unillanos",
         home: Scaffold(
-            appBar: PreferredSize(
-                preferredSize: const Size.fromHeight(100.0),
-                child: AppBar(
-                  flexibleSpace: FittedBox(
-                    fit: BoxFit.cover,
-                    child: SvgPicture.asset('assets/images/svg/header.svg'),
-                  ),
-                  backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            toolbarHeight: 200,
+            title: SizedBox(
+                height: 50,
+                child: Row(
+                  children: const <Widget>[
+                    Text("UniApp Unillanos"),
+                    Spacer(), // use Spacer
+                    Image(image: Svg('assets/images/svg/logo.svg'))
+                  ],
                 )),
-            body: const Center(
-              child: Text("Home",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 36)),
-            )));
+            elevation: 0,
+            flexibleSpace: const FittedBox(
+                fit: BoxFit.cover,
+                child: Image(image: Svg('assets/images/svg/banner.svg'))),
+            backgroundColor: Colors.transparent,
+          ),
+          body: Stack(
+            children: const <Widget>[
+              Center(
+                child: Text("Home"),
+              )
+            ],
+          ),
+          bottomNavigationBar: const BNavigator()
+        ));
   }
 }
