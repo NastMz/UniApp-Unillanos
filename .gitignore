@@ -78,3 +78,4 @@ doc/api/
 /uniapp/android/app/debug
 /uniapp/android/app/profile
 /uniapp/android/app/release
+*.pyc
