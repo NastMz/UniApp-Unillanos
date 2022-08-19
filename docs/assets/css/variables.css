@@ -1,0 +1,11 @@
+:root{
+    --main-color: #D90416;
+    --variant-main-color: #D9042B;
+    --light-main-color: #F20505;
+    --dark-main-color: #8C0303;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("/assets/fonts/Roboto/Roboto-Regular.ttf");
+}

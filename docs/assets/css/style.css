@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.welcome-banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.banner {
+    width: 60%;
+    position: relative;
+    top: -40px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.circle-background {
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    width: 110vh;
+    height: 110vh;
+    border-radius: 50%;
+    right: -60vh;
+    z-index: -100;
+}
+
+.image1, .image2, .image3 {
+    position: absolute;
+}
+
+.image1 {
+    left: 20%;
+    top: 20%;
+    height: 400px;
+    width: 190px;
+}
+
+.image2 {
+    left: 0;
+    top: 24%;
+    z-index: -1;
+    height: 350px;
+    width: 160px;
+}
+
+.image3 {
+    left: 45%;
+    top: 24%;
+    z-index: -1;
+    height: 350px;
+    width: 160px;
+}
+
+.image1 img, .image2 img, .image3 img {
+    height: 100%;
+    width: 100%;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px 0 80px;
+    width: 40%;
+    height: 80%;
+}
+
+.head-title {
+    padding: 5px 0;
+    font-size: 0.8em;
+    color: var(--dark-main-color);
+}
+
+.title {
+    padding: 0 0 20px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 0.9em;
+    padding-bottom: 30px;
+}
+
+.more-btn {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.more-btn:hover {
+    background-color: var(--dark-main-color);
+}

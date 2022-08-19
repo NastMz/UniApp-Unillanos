@@ -79,3 +79,5 @@ doc/api/
 /uniapp/android/app/profile
 /uniapp/android/app/release
 *.pyc
+
+/docs/.idea/
