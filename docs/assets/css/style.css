@@ -6,6 +6,15 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 header {
@@ -15,30 +24,35 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 30px;
 }
 
 .logo {
     font-size: 1.1em;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo span {
+.logo img {
+    height: 40px;
+}
+
+.name span {
     color: var(--main-color);
 }
 
 .welcome-banner {
-    width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     display: flex;
 }
 
 .banner {
     width: 60%;
     position: relative;
-    top: -40px;
-    overflow: hidden;
-    align-items: center;
+    display: flex;
+    max-height: 100%;
 }
 
 .circle-background {
@@ -48,40 +62,16 @@ nav {
     width: 110vh;
     height: 110vh;
     border-radius: 50%;
+    top: -90px;
     right: -60vh;
     z-index: -100;
 }
 
-.image1, .image2, .image3 {
-    position: absolute;
+.image {
 }
 
-.image1 {
-    left: 20%;
-    top: 20%;
-    height: 400px;
-    width: 190px;
-}
-
-.image2 {
-    left: 0;
-    top: 24%;
-    z-index: -1;
-    height: 350px;
-    width: 160px;
-}
-
-.image3 {
-    left: 45%;
-    top: 24%;
-    z-index: -1;
-    height: 350px;
-    width: 160px;
-}
-
-.image1 img, .image2 img, .image3 img {
-    height: 100%;
-    width: 100%;
+.image img {
+    max-height: 500px;
 }
 
 .message {
@@ -90,7 +80,6 @@ nav {
     justify-content: center;
     padding: 0 80px 0 80px;
     width: 40%;
-    height: 80%;
 }
 
 .head-title {
@@ -123,4 +112,77 @@ nav {
 
 .more-btn:hover {
     background-color: var(--dark-main-color);
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    padding: 50px;
+}
+
+footer .logo {
+    color: #fff;
+    margin-bottom: 30px;
+    fill: #fff;
+}
+
+footer img {
+    fill: #fff;
+}
+
+footer a {
+    color: #fff;
+    font-size: 0.7em;
+}
+
+footer .title {
+    font-size: 1em;
+}
+
+.sitemap {
+    display: flex;
+    gap: 100px;
+    padding-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    gap: 60px;
+}
+
+.cards ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.list ul {
+    margin-top: 15px;
+}
+
+.info {
+    border-top: 1px solid var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.copyright {
+    padding: 10px;
+    font-size: 0.65em;
+}
+
+.links a {
+    color: var(--gray-color);
+}
+
+.links ul {
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
 }
