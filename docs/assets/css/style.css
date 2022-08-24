@@ -45,15 +45,17 @@ nav {
 .welcome-banner {
     height: calc(100% - 50px);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: clip;
+    width: 100%;
 }
 
 .banner {
-    width: 60%;
-    position: relative;
     display: flex;
     align-items: center;
     max-height: 100%;
-    overflow-x: clip;
 }
 
 .circle-background {
@@ -250,4 +252,25 @@ footer .title {
     width: 160px;
     bottom: 70px;
     right: 60px;
+}
+
+@media (max-width: 900px) {
+    .welcome-banner, .function-container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .message {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .more-btn {
+        width: 40%;
+    }
+
+    .function-container {
+        gap: 50px;
+        padding: 80px;
+    }
 }
