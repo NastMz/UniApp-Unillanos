@@ -17,7 +17,7 @@ UniApp Unillanos es una aplicación móvil que tiene el fin de brindar informaci
 
 El requerimiento funcional a priorizar es "Visualizar mapas", debido a que es el más importante y el que es la base del proyecto.
 
-## Metodología seleccionada
+## Metodologia seleccionada
 
 La metodología que seleccionamos para el desarrollo fue xp, para asegurar un mayor control sobre el proyecto, y una implementación más efectiva y eficiente trabajando en periodos semanales, siguiendo un círculo de tareas a realizar. Este ciclo de desarrollo se basa en pruebas, análisis, diseño y desarrollo. Se utilizaron una serie de fases para la gestión del proyecto; donde, en la fase de exploración se trató de entender que era lo que necesitaba hacer el software, en la fase de planificación se estimó el esfuerzo que llevaría desarrollar el software. Actualmente nos encontramos en la fase de iteraciones, la cual se trata de crear una solución para el desarrollo de la aplicación. Por último, se encuentra la fase de producción, la cual consiste en entregar el producto final al cliente. Todo este proceso de fases es el ciclo de vida, el cual es dinámico.
 
@@ -32,7 +32,7 @@ En el ámbito de desarrollo se están realizando integraciones permanentes, apoy
 Finalmente, en el ámbito de pruebas se espera realizar pruebas unitarias y de aceptación, con detección y corrección de errores.
 
 
-## Roles y rotación de los mismos
+## Roles y rotacion de los mismos
 
 ### Primera semana:
 - Kevin Martínez: Desarrollador
