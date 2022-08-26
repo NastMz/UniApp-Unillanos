@@ -9,10 +9,12 @@ class Map extends StatefulWidget {
 
   var mapMarkers = <MapMarker>[];
 
-  Map({Key? key, required this.points, required this.mapMarkers}) : super(key: key);
+  Map({Key? key, required this.points, required this.mapMarkers})
+      : super(key: key);
 
   @override
-  _MapState createState() => _MapState(points: this.points, mapMarkers:this.mapMarkers);
+  _MapState createState() =>
+      _MapState(points: this.points, mapMarkers: this.mapMarkers);
 }
 
 class _MapState extends State<Map> with TickerProviderStateMixin {

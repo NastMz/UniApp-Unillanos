@@ -11,7 +11,13 @@ class Routes extends StatefulWidget {
 }
 
 class _RoutesState extends State<Routes> {
-  List<String> items = ['Porfia', 'Viva', 'Villacentro', 'Grama-Postobon', 'Terminal'];
+  List<String> items = [
+    'Porfia',
+    'Viva',
+    'Villacentro',
+    'Grama-Postobon',
+    'Terminal'
+  ];
   String selectedItem = 'Porfia';
   var points = [porfiaPoints, vivaPoints];
   var markers = [porfiaMarkers, vivaMarkers];
@@ -40,8 +46,12 @@ class _RoutesState extends State<Routes> {
                 isExpanded: true,
               ),
               Expanded(
-                flex: 1,
-                  child: Map(key: ValueKey(selectedItem),points: points[items.indexOf(selectedItem)], mapMarkers: markers[items.indexOf(selectedItem)],))
+                  flex: 1,
+                  child: Map(
+                    key: ValueKey(selectedItem),
+                    points: points[items.indexOf(selectedItem)],
+                    mapMarkers: markers[items.indexOf(selectedItem)],
+                  ))
             ]),
           )));
 }
