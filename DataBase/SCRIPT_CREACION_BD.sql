@@ -13,7 +13,7 @@ CREATE DATABASE uniapp
 CREATE TABLE IF NOT EXISTS public.bus_stop
 (
     id_bus_stop character varying(15) COLLATE pg_catalog."default" NOT NULL,
-    place character varying(10) COLLATE pg_catalog."default",
+    place character varying(50) COLLATE pg_catalog."default",
     details character varying(200) COLLATE pg_catalog."default",
     length real,
     latitude real,
@@ -22,8 +22,6 @@ CREATE TABLE IF NOT EXISTS public.bus_stop
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.bus_stop
-    OWNER to postgres;
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -33,15 +31,13 @@ ALTER TABLE IF EXISTS public.bus_stop
 
 CREATE TABLE IF NOT EXISTS public.schedule
 (
-    id_schedule integer NOT NULL,
+    id_schedule serial NOT NULL,
     hour time(6) with time zone,
     CONSTRAINT id_schedule PRIMARY KEY (id_schedule)
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.schedule
-    OWNER to postgres;
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -51,7 +47,7 @@ ALTER TABLE IF EXISTS public.schedule
 
 CREATE TABLE IF NOT EXISTS public.post
 (
-    id_post integer NOT NULL,
+    id_post serial NOT NULL,
     author character varying(30) COLLATE pg_catalog."default",
     date date,
     message text COLLATE pg_catalog."default",
@@ -61,8 +57,6 @@ CREATE TABLE IF NOT EXISTS public.post
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.post
-    OWNER to postgres;
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -74,14 +68,12 @@ CREATE TABLE IF NOT EXISTS public.route
 (
     id_route character varying(15) COLLATE pg_catalog."default" NOT NULL,
     route_name character varying(30) COLLATE pg_catalog."default",
-    direction bytea,
+    direction integer,
     CONSTRAINT id_route PRIMARY KEY (id_route)
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.route
-    OWNER to postgres;
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -91,7 +83,7 @@ ALTER TABLE IF EXISTS public.route
 
 CREATE TABLE IF NOT EXISTS public.route_bus_stop
 (
-    id_route_bus_stop integer NOT NULL,
+    id_route_bus_stop serial NOT NULL,
     id_route character varying(15) COLLATE pg_catalog."default",
     id_bus_stop character varying(10) COLLATE pg_catalog."default",
     CONSTRAINT id_route_bus_stop PRIMARY KEY (id_route_bus_stop),
@@ -107,8 +99,6 @@ CREATE TABLE IF NOT EXISTS public.route_bus_stop
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.route_bus_stop
-    OWNER to postgres;
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -118,7 +108,7 @@ ALTER TABLE IF EXISTS public.route_bus_stop
 
 CREATE TABLE IF NOT EXISTS public.service
 (
-    id_service integer NOT NULL,
+    id_service serial NOT NULL,
     id_route character varying(15) COLLATE pg_catalog."default",
     id_schedule integer,
     CONSTRAINT id_service PRIMARY KEY (id_service),
@@ -134,6 +124,12 @@ CREATE TABLE IF NOT EXISTS public.service
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.service
-    OWNER to postgres;
 
+------DROPS-----
+
+DROP TABLE bus_stop CASCADE;
+DROP TABLE post CASCADE;
+DROP TABLE route CASCADE;
+DROP TABLE route_bus_stop CASCADE;
+DROP TABLE schedule CASCADE;
+DROP TABLE service CASCADE;
