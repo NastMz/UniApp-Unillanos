@@ -6,6 +6,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    width: 100%;
 }
 
 a {
@@ -68,9 +69,6 @@ nav {
     top: -90px;
     right: -60vh;
     z-index: -100;
-}
-
-.image {
 }
 
 .image img {
@@ -255,8 +253,19 @@ footer .title {
 }
 
 @media screen and (max-width: 900px) {
+    body {
+        font-size: 1em;
+    }
+
+    .function-description h2 {
+        font-size: 1.5em;
+    }
+
     .welcome-banner, .function-container {
         flex-direction: column;
+    }
+
+    .function-container {
         height: fit-content;
     }
 
@@ -267,10 +276,32 @@ footer .title {
 
     .more-btn {
         width: 40%;
+        border: 1px solid #fff;
+        margin-bottom: 20px;
     }
 
     .function-container {
         gap: 50px;
         padding: 80px;
     }
+
+    .image img {
+        max-width: 100%;
+    }
+
+    .pattern {
+        top: -10px;
+        left: -10px;
+    }
+
+    .pattern-b {
+        top: 40px;
+        left: 40px;
+    }
+
+    .pattern-c {
+        bottom: 30px;
+        right: 30px;
+    }
+
 }
