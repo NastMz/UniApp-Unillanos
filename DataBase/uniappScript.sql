@@ -41,7 +41,7 @@ INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pP
 INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf2','Supermercado Marketing','Supermercado Marketing',4.064833,-73.671318);
 INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf3','Salida los Chopos','Frente a la ferretería Las Palmas, diagonal a los Chopos',4.073257, -73.669342);
 INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf4','Congente','Frente a cajero congente',4.079063, -73.669262);
-INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf5','Consuerte','Diagonal templo católico semáforo Consuerte',4.079063, -73.669262);
+INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf5','Consuerte','Diagonal templo católico semáforo Consuerte',4.0826917,-73.6692422);
 INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf6','Bomba Texaco','Esquina de la bomba de gasolina en la entrada a porfia',4.088458, -73.670179);
 INSERT INTO bus_stop (id_bus_stop, place, details, length, latitude) VALUES ('pPorf7',' Segunda entrada Samán','Segunda entrada Samán en el puente peatonal', 4.091312, -73.666702);
 

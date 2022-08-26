@@ -43,9 +43,9 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
           FlutterMap(
             mapController: mapController,
             options: MapOptions(
-                minZoom: 5,
+                minZoom: 10,
                 maxZoom: 18,
-                zoom: 14,
+                zoom: 15,
                 center: mapMarkers[0].location),
             layers: [
               TileLayerOptions(
@@ -67,7 +67,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                               curve: Curves.easeInOut,
                             );
                             selectedIndex = i;
-                            _animatedMapMove(mapMarkers[i].location, 11.5);
+                            _animatedMapMove(mapMarkers[i].location, 15);
                             setState(() {});
                           },
                           child: AnimatedScale(
@@ -77,7 +77,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                               duration: const Duration(milliseconds: 500),
                               opacity: selectedIndex == i ? 1 : 0.5,
                               child: const Icon(
-                                Icons.pin_drop,
+                                Icons.room,
                                 color: Color(0xFFCB0303),
                                 size: 50.0,
                               ),
@@ -105,7 +105,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
               controller: pageController,
               onPageChanged: (value) {
                 selectedIndex = value;
-                _animatedMapMove(mapMarkers[value].location, 14);
+                _animatedMapMove(mapMarkers[value].location, 15);
                 setState(() {});
               },
               itemCount: mapMarkers.length,
@@ -113,7 +113,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                 final item = mapMarkers[index];
                 return Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 15.0, horizontal: 5.0),
+                        vertical: 15.0, horizontal: 10.0),
                     child: Card(
                       elevation: 5,
                       shape: RoundedRectangleBorder(
@@ -121,8 +121,9 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                       ),
                       color: const Color(0xFFFFFFFF),
                       child: Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
+                        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+                        child: Center(
+                            child: Row(
                           children: [
                             const SizedBox(width: 10),
                             Expanded(
@@ -130,21 +131,21 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Expanded(
-                                    flex: 2,
+                                    flex: 1,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          item.title ?? '',
+                                          item.title,
                                           style: const TextStyle(
-                                            fontSize: 20,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                         const SizedBox(height: 10),
                                         Text(
-                                          item.address ?? '',
+                                          item.address,
                                           style: const TextStyle(
                                             fontSize: 14,
                                             color: Colors.grey,
@@ -159,7 +160,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                             const SizedBox(width: 10),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(5.0),
                                 child: ClipRRect(
                                     borderRadius: BorderRadius.circular(10),
                                     child: item.image != ''
@@ -178,7 +179,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                               ),
                             ),
                           ],
-                        ),
+                        )),
                       ),
                     ));
               },

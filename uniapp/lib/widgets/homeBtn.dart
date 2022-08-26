@@ -15,27 +15,24 @@ Widget homeBtn(var context, int index, String text, String icon) {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
           textStyle:
-              const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
       child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5.0),
+          padding: const EdgeInsets.only(left: 10.0, top: 10.0),
           child: SizedBox(
               height: 100,
-              width: 130,
-              child: Expanded(
-                  flex: 2,
-                  child: Row(
-                    children: <Widget>[
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(text),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Image(
-                          image: Svg(icon),
-                          width: 50,
-                        ),
-                      )
-                    ],
-                  )))));
+              width: 120,
+              child: Stack(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(text),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Image(
+                      image: Svg(icon, size: const Size(50, 70)),
+                    ),
+                  )
+                ],
+              ))));
 }
