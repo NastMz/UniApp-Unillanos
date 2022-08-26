@@ -41,6 +41,7 @@ dependencies:
   flutter_map: ^2.2.0
   latlong2: ^0.8.1
   footer: ^0.0.4
+  location: ^4.4.0
 
 dev_dependencies:
   flutter_test:

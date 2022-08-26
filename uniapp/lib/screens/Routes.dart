@@ -2,6 +2,7 @@ import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:uniapp/models/mapMarker.dart';
 import 'package:uniapp/widgets/map.dart';
 
 class Routes extends StatefulWidget {
@@ -12,13 +13,8 @@ class Routes extends StatefulWidget {
 class _RoutesState extends State<Routes> {
   List<String> items = ['Porfia', 'Viva', 'Villacentro', 'Grama-Postobon', 'Terminal'];
   String selectedItem = 'Porfia';
-  List startPoint = [
-    {'lat': 4.0593938, 'long': -73.6700653},
-    {'lat': 4.125370, 'long': -73.636071},
-    {'lat': 4.1331923, 'long': -73.6366531},
-    {'lat': 4.158367, 'long':  -73.640998},
-    {'lat': 4.148175, 'long': -73.624406}
-  ];
+  var points = [porfiaPoints, vivaPoints];
+  var markers = [porfiaMarkers, vivaMarkers];
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -29,11 +25,10 @@ class _RoutesState extends State<Routes> {
             child: Image(image: Svg('assets/images/svg/banner.svg'))),
         backgroundColor: Colors.transparent,
       ),
-      body: Container(
-          margin: const EdgeInsets.only(bottom: 8.0),
+      body: SizedBox(
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Column(children: <Widget>[
               DropdownButton<String>(
                 value: selectedItem,
@@ -44,11 +39,9 @@ class _RoutesState extends State<Routes> {
                 onChanged: (item) => setState(() => selectedItem = item!),
                 isExpanded: true,
               ),
-              SizedBox(
-                  width: double.infinity,
-                  height: 500,
-                  child: map(startPoint[items.indexOf(selectedItem)]['lat'],
-                      startPoint[items.indexOf(selectedItem)]['long']))
+              Expanded(
+                flex: 1,
+                  child: Map(key: ValueKey(selectedItem),points: points[items.indexOf(selectedItem)], mapMarkers: markers[items.indexOf(selectedItem)],))
             ]),
           )));
 }

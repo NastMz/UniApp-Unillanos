@@ -33,70 +33,66 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.transparent,
         ),
         body: Container(
-          margin: EdgeInsets.symmetric(vertical: 100, horizontal: 0),
-          child: Column(
-          children: [Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => BNavigator(index: 2))
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            onPrimary: Colors.black,
-                            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                            textStyle: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold
-                            )
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Column(
-                              children: [
-                                Text('Novedades   '),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                Image(image: Svg('assets/images/svg/news_icon.svg'), width: 50,),
-                              ],
-                            )
-                          ],
-                        )
-                    ),
-                    const SizedBox(height: 20),
-                    ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => BNavigator(index: 3))
-                          );
-                        },
+          margin: const EdgeInsets.symmetric(vertical: 100, horizontal: 0),
+          child: Column(children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BNavigator(index: 2)));
+                      },
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.black,
-                        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                        textStyle: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold
-                        )
-                      ),
+                          primary: Colors.white,
+                          onPrimary: Colors.black,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          textStyle: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold)),
                       child: Row(
                         children: <Widget>[
                           Column(
-                            children: [
+                            children: const [
+                              Text('Novedades   '),
+                            ],
+                          ),
+                          Column(
+                            children: const [
+                              SizedBox(
+                                height: 50,
+                              ),
+                              Image(
+                                image: Svg('assets/images/svg/news_icon.svg'),
+                                width: 50,
+                              ),
+                            ],
+                          )
+                        ],
+                      )),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BNavigator(index: 3)));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          onPrimary: Colors.black,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          textStyle: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold)),
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            children: const [
                               SizedBox(
                                 height: 0,
                               ),
@@ -104,71 +100,73 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                           Column(
-                            children: [
+                            children: const [
                               SizedBox(
                                 height: 50,
                               ),
-                              Image(image: Svg('assets/images/svg/about_icon.svg'), width: 50,),
+                              Image(
+                                image: Svg('assets/images/svg/about_icon.svg'),
+                                width: 50,
+                              ),
                             ],
                           )
                         ],
-                      )
-                    ),
-                  ]
-              ),
-              const SizedBox(width: 10),
-              Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => BNavigator(index: 1))
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
-                            onPrimary: Colors.black,
-                            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                            textStyle: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold
-                            )
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Column(
-                              children: [
-                                SizedBox(
-                                  height: 0,
-                                ),
-                                Text('Rutas          '),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                Image(image: Svg('assets/images/svg/location_icon.svg'), width: 50,),
-                              ],
-                            )
-                          ],
-                        )
-                    ),
-                    const SizedBox(height: 77.5),
-                   ]
-              ),
-            ],
-          ),
-            const SizedBox(height: 140),
-            Text("@2022 UniApp Unillanos"),
-            Text("Proyecto Ingeniería de Software II"),
-            Text("Kevin Santiago Martinez, Joshep Mateo Granada"),
-            Text("Camilo Andres Tejeiro, Pablo Santiago Bobadilla"),
-          ]
-          ),     
-      ),
+                      )),
+                ]),
+                const SizedBox(width: 10),
+                Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BNavigator(index: 1)));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          onPrimary: Colors.black,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)),
+                          textStyle: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold)),
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            children: const [
+                              SizedBox(
+                                height: 0,
+                              ),
+                              Text('Rutas          '),
+                            ],
+                          ),
+                          Column(
+                            children: const [
+                              SizedBox(
+                                height: 50,
+                              ),
+                              Image(
+                                image:
+                                    Svg('assets/images/svg/location_icon.svg'),
+                                width: 50,
+                              ),
+                            ],
+                          )
+                        ],
+                      )),
+                  const SizedBox(height: 77.5),
+                ]),
+              ],
+            ),
+            Expanded(
+                child: Center(
+              child: Column(children: const [
+                Text("@2022 UniApp Unillanos"),
+                Text("Proyecto Ingeniería de Software II"),
+                Text("Kevin Santiago Martinez, Joshep Mateo Granada"),
+                Text("Camilo Andres Tejeiro, Pablo Santiago Bobadilla"),
+              ]),
+            )),
+          ]),
+        ),
       );
 }
