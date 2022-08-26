@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:uniapp/screens/Home.dart';
 import 'package:uniapp/widgets/NavBar.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class _State extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
         title: "UniApp Unillanos",
-        home: BNavigator()
+        home: Home()
         );
   }
 }

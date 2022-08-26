@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:uniapp/widgets/NavBar.dart';
 import 'package:uniapp/widgets/feedBox.dart';
+import 'package:uniapp/screens/About.dart';
+import 'package:uniapp/screens/Home.dart';
+import 'package:uniapp/screens/routes.dart';
 
 const avatarUrl =
-    "https://repositorio.unillanos.edu.co/bitstream/id/30fd0dec-cf21-42ed-a9a6-dc98e0cec2e6/1.png?sequence=-1";
+    "https://scontent.fvvc3-1.fna.fbcdn.net/v/t1.18169-9/16711717_162028044300653_4865606214718814368_n.png?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeE4u3W619NlYmMJMfrJjkvX5SYh_dNTnMLlJiH901Ocwhgog6LcikLQM2SU0tewqnSSxrhJJCqoL9yeqEYaldMM&_nc_ohc=8TtLI1Lea5wAX_uC1ZG&_nc_ht=scontent.fvvc3-1.fna&oh=00_AT8xSHqzzf6T7bGi8JPjPyt4ZtzUgNpQitcH5CfkIwJoPA&oe=632F7B44";
 
 class News extends StatelessWidget {
   @override
@@ -44,5 +48,7 @@ class News extends StatelessWidget {
               "Se le informa a los estudiantes que se normalizó todo el transporte",
               ""),
         ],
-      ));
+      ),
+  );
 }
+

@@ -6,17 +6,19 @@ import 'package:uniapp/screens/News.dart';
 import 'package:uniapp/screens/routes.dart';
 
 class BNavigator extends StatefulWidget {
-  const BNavigator({Key? key}) : super(key: key);
-
+  var index;
+  BNavigator({this.index});
   @override
-  _BNavigatorState createState() => _BNavigatorState();
+  _BNavigatorState createState() => _BNavigatorState(index: this.index);
 }
 
 class _BNavigatorState extends State<BNavigator> {
-  int index = 0;
+  var index;
+
+  _BNavigatorState({this.index});
 
   List screens = [
-    Home(),
+    null,
     Routes(),
     News(),
     About(),
@@ -29,7 +31,7 @@ class _BNavigatorState extends State<BNavigator> {
     
   ];
 
-@override
+  @override
   Widget build(BuildContext context) => Scaffold( 
       body: screens[index], 
       bottomNavigationBar: BottomNavigationBar(
@@ -38,9 +40,13 @@ class _BNavigatorState extends State<BNavigator> {
       unselectedItemColor: const Color(0xff4d4d4d),
       currentIndex: index,
       onTap: (int i) {
-        setState(() {
+        if (i == 0) {
+          Navigator.pop(context);
+        } else {
+          setState(() {
           index = i;
         });
+        }
       },
       items:
       const [
