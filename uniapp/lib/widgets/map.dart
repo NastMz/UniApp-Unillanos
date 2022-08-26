@@ -121,7 +121,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                       ),
                       color: const Color(0xFFFFFFFF),
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+                        padding: const EdgeInsets.symmetric(vertical: 45.0, horizontal: 15.0),
                         child: Center(
                             child: Row(
                           children: [

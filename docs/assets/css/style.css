@@ -43,7 +43,7 @@ nav {
 }
 
 .welcome-banner {
-    height: calc(100% - 50px);
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
