@@ -19,3 +19,65 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/uniapp-api/.idea/
+
+
+# Miscellaneous
+/uniapp/*.class
+/uniapp/*.log
+/uniapp/*.pyc
+/uniapp/*.swp
+/uniapp/.DS_Store
+/uniapp/.atom/
+/uniapp/.buildlog/
+/uniapp/.history
+/uniapp/.svn/
+/uniapp/migrate_working_dir/
+
+# IntelliJ related
+/uniapp/*.iml
+/uniapp/*.ipr
+/uniapp/*.iws
+/uniapp/.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+/uniapp/**/doc/api/
+/uniapp/**/ios/Flutter/.last_build_id
+/uniapp/.dart_tool/
+/uniapp/.flutter-plugins
+/uniapp/.flutter-plugins-dependencies
+/uniapp/.packages
+/uniapp/.pub-cache/
+/uniapp/.pub/
+/uniapp/build/
+
+# Web related
+/uniapp/lib/generated_plugin_registrant.dart
+
+# Symbolication related
+/uniapp/app.*.symbols
+
+# Obfuscation related
+/uniapp/app.*.map.json
+
+# Android Studio will place build artifacts here
+/uniapp/android/app/debug
+/uniapp/android/app/profile
+/uniapp/android/app/release
+*.pyc
+
+/docs/.idea/
