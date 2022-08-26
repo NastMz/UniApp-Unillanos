@@ -254,7 +254,7 @@ footer .title {
     right: 60px;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .welcome-banner, .function-container {
         flex-direction: column;
         height: fit-content;
