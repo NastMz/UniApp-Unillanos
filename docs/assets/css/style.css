@@ -303,5 +303,10 @@ footer .title {
         bottom: 30px;
         right: 30px;
     }
+    
+    .sitemap {
+        gap: 0px;
+        flex-direction: column;
+    }
 
 }
