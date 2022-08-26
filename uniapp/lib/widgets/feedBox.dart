@@ -6,16 +6,17 @@ Widget feedBox(String avatarUrl, String userName, String date,
     margin: const EdgeInsets.only(bottom: 20.0),
     width: double.infinity,
     decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12.0),
-        color: const Color(0xFFFFFFFF),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 7,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
-        ],),
+      borderRadius: BorderRadius.circular(12.0),
+      color: const Color(0xFFFFFFFF),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.5),
+          spreadRadius: 5,
+          blurRadius: 7,
+          offset: const Offset(0, 3), // changes position of shadow
+        ),
+      ],
+    ),
     child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
