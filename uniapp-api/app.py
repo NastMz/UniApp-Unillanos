@@ -25,8 +25,8 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
-    s.enter(t, 1, find_post, (s,))
-    s.run()
+    # s.enter(t, 1, find_post, (s,))
+    # s.run()
 
     app.config.from_object(config['development'])
 
@@ -36,4 +36,4 @@ if __name__ == '__main__':
 
     # Error handlers
     app.register_error_handler(404, page_not_found)
-    app.run()
+    app.run(host='192.168.0.102', port=5000)
