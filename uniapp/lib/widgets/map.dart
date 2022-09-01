@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:uniapp/widgets/image_popup.dart';
 
-import '../models/mapMarker.dart';
+import '../models/map_marker.dart';
 
-class Map extends StatefulWidget {
+class MapWidget extends StatefulWidget {
   var points = <LatLng>[];
 
   var mapMarkers = <MapMarker>[];
 
-  Map({Key? key, required this.points, required this.mapMarkers})
+  MapWidget({Key? key, required this.points, required this.mapMarkers})
       : super(key: key);
 
   @override
-  _MapState createState() =>
-      _MapState(points: this.points, mapMarkers: this.mapMarkers);
+  _MapWidgetState createState() =>
+      _MapWidgetState(points: points, mapMarkers: mapMarkers);
 }
 
-class _MapState extends State<Map> with TickerProviderStateMixin {
+class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
   final pageController = PageController();
   int selectedIndex = 0;
 
@@ -27,12 +29,45 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
 
   late final MapController mapController;
 
-  _MapState({required this.points, required this.mapMarkers});
+  _MapWidgetState({required this.points, required this.mapMarkers});
 
   @override
   void initState() {
     super.initState();
     mapController = MapController();
+  }
+
+  List<Marker> _buildMarkers() {
+    final List<Marker> markersList = [];
+    for (int i = 0; i < mapMarkers.length; i++) {
+      markersList.add(Marker(
+        height: 40,
+        width: 40,
+        point: mapMarkers[i].location,
+        builder: (_) => GestureDetector(
+          onTap: () {
+            pageController.animateToPage(
+              i,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeInOut,
+            );
+            _animatedMapMove(mapMarkers[i].location, 15);
+            setState(() => selectedIndex = i);
+          },
+          child: AnimatedScale(
+            duration: const Duration(milliseconds: 500),
+            scale: selectedIndex == i ? 1 : 0.7,
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 500),
+              opacity: selectedIndex == i ? 1 : 0.5,
+              child:
+                  const Image(image: Svg('asset/images/svg/location_icon.svg')),
+            ),
+          ),
+        ),
+      ));
+    }
+    return markersList;
   }
 
   @override
@@ -43,7 +78,7 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
           FlutterMap(
             mapController: mapController,
             options: MapOptions(
-                minZoom: 10,
+                minZoom: 8,
                 maxZoom: 18,
                 zoom: 15,
                 center: mapMarkers[0].location),
@@ -51,49 +86,13 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
               TileLayerOptions(
                   urlTemplate:
                       "https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
-              MarkerLayerOptions(
-                markers: [
-                  for (int i = 0; i < mapMarkers.length; i++)
-                    Marker(
-                      height: 40,
-                      width: 40,
-                      point: mapMarkers[i].location,
-                      builder: (_) {
-                        return GestureDetector(
-                          onTap: () {
-                            pageController.animateToPage(
-                              i,
-                              duration: const Duration(milliseconds: 500),
-                              curve: Curves.easeInOut,
-                            );
-                            selectedIndex = i;
-                            _animatedMapMove(mapMarkers[i].location, 15);
-                            setState(() {});
-                          },
-                          child: AnimatedScale(
-                            duration: const Duration(milliseconds: 500),
-                            scale: selectedIndex == i ? 1 : 0.7,
-                            child: AnimatedOpacity(
-                              duration: const Duration(milliseconds: 500),
-                              opacity: selectedIndex == i ? 1 : 0.5,
-                              child: const Icon(
-                                Icons.room,
-                                color: Color(0xFFCB0303),
-                                size: 50.0,
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                ],
-              ),
               PolylineLayerOptions(polylines: [
                 Polyline(
                     points: points,
                     color: const Color(0xFFCB0303),
                     strokeWidth: 2.0)
-              ])
+              ]),
+              MarkerLayerOptions(markers: _buildMarkers())
             ],
           ),
           Positioned(
@@ -104,16 +103,14 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
             child: PageView.builder(
               controller: pageController,
               onPageChanged: (value) {
-                selectedIndex = value;
                 _animatedMapMove(mapMarkers[value].location, 15);
-                setState(() {});
+                setState(() => selectedIndex = value);
               },
               itemCount: mapMarkers.length,
               itemBuilder: (_, index) {
                 final item = mapMarkers[index];
                 return Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15.0, horizontal: 10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Card(
                       elevation: 5,
                       shape: RoundedRectangleBorder(
@@ -121,11 +118,11 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                       ),
                       color: const Color(0xFFFFFFFF),
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 45.0, horizontal: 15.0),
+                        padding: const EdgeInsets.only(
+                            bottom: 10, top: 20, left: 20, right: 20),
                         child: Center(
-                            child: Row(
+                            child: Column(
                           children: [
-                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -135,6 +132,8 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Text(
                                           item.title,
@@ -157,26 +156,38 @@ class _MapState extends State<Map> with TickerProviderStateMixin {
                                 ],
                               ),
                             ),
-                            const SizedBox(width: 10),
+                            const SizedBox(width: 5),
                             Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: item.image != ''
-                                        ? Image.asset(
-                                            item.image,
-                                            fit: BoxFit.cover,
-                                          )
-                                        : const FittedBox(
-                                            fit: BoxFit.fill,
-                                            child: Icon(
-                                              Icons.photo_album,
-                                              size: 100,
-                                              color: Colors.grey,
+                              flex: 1,
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (context) => GestureDetector(
+                                              onTap: () =>
+                                                  Navigator.pop(context),
+                                              child: ImagePopup(item.image,
+                                                  Key(item.title))));
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: item.image != ''
+                                          ? Image.asset(
+                                              item.image,
+                                              fit: BoxFit.fill,
+                                            )
+                                          : const FittedBox(
+                                              fit: BoxFit.fill,
+                                              child: Icon(
+                                                Icons.photo_album,
+                                                size: 100,
+                                                color: Colors.grey,
+                                              ),
                                             ),
-                                          )),
-                              ),
+                                    ),
+                                  )),
                             ),
                           ],
                         )),
