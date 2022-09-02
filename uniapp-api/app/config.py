@@ -9,6 +9,6 @@ class DevelopmentConfig(Config):
     DEBUG = True
 
 
-config = {
+configuration = {
     'development': DevelopmentConfig
 }

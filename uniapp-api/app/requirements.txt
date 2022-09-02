@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+facebook-sdk
+psycopg2
+python-decouple
+uWSGI
