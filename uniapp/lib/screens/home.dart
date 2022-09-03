@@ -13,6 +13,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
+
     return Scaffold(
       body: Stack(children: [
         Container(
@@ -49,14 +52,14 @@ class _HomeState extends State<Home> {
                           child: GridView.count(
                               mainAxisSpacing: 30.0,
                               crossAxisSpacing: 30.0,
-                              crossAxisCount: 2,
+                              crossAxisCount: isLandscape ? 3 : 2,
                               children: [
                                 homeBtn(context, 1, 'Rutas',
                                     'asset/images/svg/location_icon.svg'),
-                                homeBtn(context, 3, 'Acerca de',
-                                    'asset/images/svg/about_icon.svg'),
                                 homeBtn(context, 2, 'Novedades',
                                     'asset/images/svg/news_icon.svg'),
+                                homeBtn(context, 3, 'Acerca de',
+                                    'asset/images/svg/about_icon.svg'),
                               ]))),
                   Align(
                     alignment: Alignment.bottomCenter,
