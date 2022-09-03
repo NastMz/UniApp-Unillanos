@@ -39,6 +39,7 @@ class _BNavigatorState extends State<BNavigator> {
   Widget build(BuildContext context) => Scaffold(
         body: SizedBox.expand(
             child: PageView(
+                physics: const NeverScrollableScrollPhysics(),
                 controller: _pageController,
                 onPageChanged: (index) {
                   if (index == 0) {

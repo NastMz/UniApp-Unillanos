@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
       body: Stack(children: [
         Container(
           padding:
-              EdgeInsets.only(top: size.height * 0.035, left: 20, right: 30),
+              EdgeInsets.only(top: size.height * 0.04, left: 15, right: 25),
           height: size.height * 0.3,
           decoration: const BoxDecoration(
               image: DecorationImage(
