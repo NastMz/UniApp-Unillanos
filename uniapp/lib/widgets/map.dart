@@ -102,7 +102,7 @@ class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
               itemBuilder: (_, index) {
                 final item = widget.mapMarkers[index];
                 return Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: MapCard(item: item));
               },
             ),

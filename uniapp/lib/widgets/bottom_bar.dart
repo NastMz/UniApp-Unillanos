@@ -5,43 +5,55 @@ import 'package:uniapp/screens/news.dart';
 import 'package:uniapp/screens/routes.dart';
 
 class BNavigator extends StatefulWidget {
-  int index = 0;
+  int index;
 
   BNavigator({Key? key, required this.index}) : super(key: key);
 
   @override
-  _BNavigatorState createState() => _BNavigatorState(index: index);
+  _BNavigatorState createState() => _BNavigatorState();
 }
 
 class _BNavigatorState extends State<BNavigator> {
-  late int index;
-
-  _BNavigatorState({required this.index});
-
-  List screens = [
-    null,
+  List<Widget> screens = [
+    Container(),
     Routes(),
     News(),
     const About(),
   ];
 
+  late PageController _pageController;
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: widget.index);
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: screens[index],
+        body: SizedBox.expand(
+            child: PageView(
+                controller: _pageController,
+                onPageChanged: (index) {
+                  if (index == 0) {
+                    Navigator.pop(context);
+                  } else {
+                    setState(() => widget.index = index);
+                  }
+                },
+                children: screens)),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: const Color(0xfe961323),
           unselectedItemColor: const Color(0xff4d4d4d),
-          currentIndex: index,
-          onTap: (int i) {
-            if (i == 0) {
-              Navigator.pop(context);
-            } else {
-              setState(() {
-                index = i;
-              });
-            }
-          },
+          currentIndex: widget.index,
+          onTap: _onItemTapped,
           items: const [
             BottomNavigationBarItem(
                 icon: Image(
@@ -97,4 +109,19 @@ class _BNavigatorState extends State<BNavigator> {
           ),
         ),
       );
+
+  void _onItemTapped(int index) {
+    if (index == 0) {
+      Navigator.pop(context);
+    } else {
+      setState(() {
+        widget.index = index;
+        //
+        //
+        //using this page controller you can make beautiful animation effects
+        _pageController.animateToPage(index,
+            duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
+      });
+    }
+  }
 }

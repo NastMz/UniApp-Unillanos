@@ -14,6 +14,7 @@ class About extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: ListView(
+                shrinkWrap: true,
                 children: const [
                   Text(
                     'Politica de Privacidad',

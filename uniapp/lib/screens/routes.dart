@@ -46,17 +46,16 @@ class _RoutesState extends State<Routes> with WidgetsBindingObserver, API {
             child: isLoading
                 ? Column(children: const [
                     SizedBox(
-                      height: 50,
+                      height: 80,
                     ),
                     Text(
                       'Cargando mapa, por favor espere',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
                         fontSize: 22,
                       ),
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 80,
                     ),
                     SpinKitCircle(
                       color: Color(0xFFCB0303),

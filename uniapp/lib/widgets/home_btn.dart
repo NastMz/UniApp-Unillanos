@@ -14,7 +14,8 @@ Widget homeBtn(var context, int index, String text, String icon) {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
           padding: const EdgeInsets.only(top: 20, left: 20),
-          elevation: 3.0),
+          elevation: 3.0,
+          enableFeedback: true),
       child: Stack(
         fit: StackFit.expand,
         clipBehavior: Clip.none,
