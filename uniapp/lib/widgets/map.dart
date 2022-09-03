@@ -2,34 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:uniapp/widgets/image_popup.dart';
-
-import '../models/map_marker.dart';
+import 'package:uniapp/models/map_marker.dart';
+import 'package:uniapp/widgets/map_card.dart';
 
 class MapWidget extends StatefulWidget {
-  var points = <LatLng>[];
+  List<LatLng> points;
 
-  var mapMarkers = <MapMarker>[];
+  List<MapMarker> mapMarkers;
 
   MapWidget({Key? key, required this.points, required this.mapMarkers})
       : super(key: key);
 
   @override
-  _MapWidgetState createState() =>
-      _MapWidgetState(points: points, mapMarkers: mapMarkers);
+  _MapWidgetState createState() => _MapWidgetState();
 }
 
 class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
   final pageController = PageController();
   int selectedIndex = 0;
 
-  var points = <LatLng>[];
-
-  var mapMarkers = <MapMarker>[];
-
   late final MapController mapController;
-
-  _MapWidgetState({required this.points, required this.mapMarkers});
 
   @override
   void initState() {
@@ -39,11 +31,11 @@ class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
 
   List<Marker> _buildMarkers() {
     final List<Marker> markersList = [];
-    for (int i = 0; i < mapMarkers.length; i++) {
+    for (int i = 0; i < widget.mapMarkers.length; i++) {
       markersList.add(Marker(
         height: 40,
         width: 40,
-        point: mapMarkers[i].location,
+        point: widget.mapMarkers[i].location,
         builder: (_) => GestureDetector(
           onTap: () {
             pageController.animateToPage(
@@ -51,7 +43,7 @@ class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
               duration: const Duration(milliseconds: 500),
               curve: Curves.easeInOut,
             );
-            _animatedMapMove(mapMarkers[i].location, 15);
+            _animatedMapMove(widget.mapMarkers[i].location, 15);
             setState(() => selectedIndex = i);
           },
           child: AnimatedScale(
@@ -81,14 +73,14 @@ class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
                 minZoom: 8,
                 maxZoom: 18,
                 zoom: 15,
-                center: mapMarkers[0].location),
+                center: widget.mapMarkers[0].location),
             layers: [
               TileLayerOptions(
                   urlTemplate:
                       "https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
               PolylineLayerOptions(polylines: [
                 Polyline(
-                    points: points,
+                    points: widget.points,
                     color: const Color(0xFFCB0303),
                     strokeWidth: 2.0)
               ]),
@@ -103,96 +95,15 @@ class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
             child: PageView.builder(
               controller: pageController,
               onPageChanged: (value) {
-                _animatedMapMove(mapMarkers[value].location, 15);
+                _animatedMapMove(widget.mapMarkers[value].location, 15);
                 setState(() => selectedIndex = value);
               },
-              itemCount: mapMarkers.length,
+              itemCount: widget.mapMarkers.length,
               itemBuilder: (_, index) {
-                final item = mapMarkers[index];
+                final item = widget.mapMarkers[index];
                 return Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      color: const Color(0xFFFFFFFF),
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            bottom: 10, top: 20, left: 20, right: 20),
-                        child: Center(
-                            child: Column(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Expanded(
-                                    flex: 1,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          item.title,
-                                          style: const TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                        Text(
-                                          item.address,
-                                          style: const TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.grey,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 5),
-                            Expanded(
-                              flex: 1,
-                              child: Align(
-                                  alignment: Alignment.center,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      showDialog(
-                                          context: context,
-                                          builder: (context) => GestureDetector(
-                                              onTap: () =>
-                                                  Navigator.pop(context),
-                                              child: ImagePopup(item.image,
-                                                  Key(item.title))));
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: item.image != ''
-                                          ? Image.asset(
-                                              item.image,
-                                              fit: BoxFit.fill,
-                                            )
-                                          : const FittedBox(
-                                              fit: BoxFit.fill,
-                                              child: Icon(
-                                                Icons.photo_album,
-                                                size: 100,
-                                                color: Colors.grey,
-                                              ),
-                                            ),
-                                    ),
-                                  )),
-                            ),
-                          ],
-                        )),
-                      ),
-                    ));
+                    child: MapCard(item: item));
               },
             ),
           )

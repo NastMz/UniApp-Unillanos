@@ -9,7 +9,7 @@ import 'package:uniapp/models/map_marker.dart';
 import 'package:uniapp/models/stop_model.dart';
 
 class API {
-  final host = '192.168.0.102:5000';
+  final host = 'ec2-54-147-221-39.compute-1.amazonaws.com';
 
   Future<http.Response> _get(var url) async {
     var header = {
@@ -21,9 +21,11 @@ class API {
     var response = await retry(
       // Make a GET request
       () => http.get(url, headers: header).timeout(const Duration(seconds: 5)),
+      maxAttempts: 20,
       // Retry on SocketException or TimeoutException
       retryIf: (e) => e is SocketException || e is TimeoutException,
     );
+
     return response;
   }
 

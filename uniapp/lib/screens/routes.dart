@@ -5,6 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:uniapp/api/api.dart';
 import 'package:uniapp/models/map_marker.dart';
+import 'package:uniapp/widgets/alert.dart';
 import 'package:uniapp/widgets/app_bar.dart';
 import 'package:uniapp/widgets/map.dart';
 
@@ -40,37 +41,55 @@ class _RoutesState extends State<Routes> with WidgetsBindingObserver, API {
           body: Stack(children: [
         appBar(context),
         Container(
-            margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1, bottom: 10),
+            margin:
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
             child: isLoading
-                ? const SpinKitCircle(
-                    color: Color(0xFFCB0303),
-                    size: 100.0,
-                  )
+                ? Column(children: const [
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Text(
+                      'Cargando mapa, por favor espere',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    SpinKitCircle(
+                      color: Color(0xFFCB0303),
+                      size: 100.0,
+                    )
+                  ])
                 : SizedBox(
                     width: double.infinity,
                     child: Padding(
                       padding: const EdgeInsets.only(
                           left: 25.0, right: 25.0, bottom: 25.0),
-                      child: Column(children: <Widget>[
-                        DropdownButton<String>(
-                          value: selectedItem,
-                          items: items
-                              .map((item) => DropdownMenuItem<String>(
-                                  value: item, child: Text(item)))
-                              .toList(),
-                          onChanged: (item) =>
-                              setState(() => selectedItem = item!),
-                          isExpanded: true,
-                        ),
-                        const SizedBox(height: 10),
-                        Expanded(
-                            flex: 1,
-                            child: MapWidget(
-                              key: ValueKey(selectedItem),
-                              points: points[selectedItem]!,
-                              mapMarkers: markers[selectedItem]!,
-                            ))
-                      ]),
+                      child: markers.isNotEmpty
+                          ? Column(children: <Widget>[
+                              DropdownButton<String>(
+                                value: selectedItem,
+                                items: items
+                                    .map((item) => DropdownMenuItem<String>(
+                                        value: item, child: Text(item)))
+                                    .toList(),
+                                onChanged: (item) =>
+                                    setState(() => selectedItem = item!),
+                                isExpanded: true,
+                              ),
+                              const SizedBox(height: 10),
+                              Expanded(
+                                  flex: 1,
+                                  child: MapWidget(
+                                    key: ValueKey(selectedItem),
+                                    points: points[selectedItem]!,
+                                    mapMarkers: markers[selectedItem]!,
+                                  ))
+                            ])
+                          : alertBox(),
                     )))
       ]));
 }

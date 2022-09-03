@@ -6,13 +6,12 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-          body: Stack(children: [
+          body: Column(children: [
         appBar(context),
         Container(
-            margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.1, bottom: 10),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            margin:
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
+            child: Center(
               child: Column(
                 children: [
                   const Text(
