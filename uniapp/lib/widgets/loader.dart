@@ -8,9 +8,11 @@ class LoadWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Expanded(
         child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.symmetric(
+                horizontal: 40, vertical: size.height * 0.25),
             child: Align(
                 alignment: Alignment.center,
                 child: Column(children: [

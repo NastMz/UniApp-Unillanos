@@ -7,8 +7,7 @@ const avatarUrl =
 
 class News extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => Scaffold(
-          body: Column(children: [
+  Widget build(BuildContext context) => Column(children: [
         appBar(context),
         Expanded(
             child: ListView(
@@ -37,5 +36,5 @@ class News extends StatelessWidget {
                 ""),
           ],
         ))
-      ]));
+      ]);
 }

@@ -64,51 +64,49 @@ class _MapWidgetState extends State<MapWidget> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          FlutterMap(
-            mapController: mapController,
-            options: MapOptions(
-                minZoom: 8,
-                maxZoom: 18,
-                zoom: 15,
-                center: widget.mapMarkers[0].location),
-            layers: [
-              TileLayerOptions(
-                  urlTemplate:
-                      "https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
-              PolylineLayerOptions(polylines: [
-                Polyline(
-                    points: widget.points,
-                    color: const Color(0xFFCB0303),
-                    strokeWidth: 2.0)
-              ]),
-              MarkerLayerOptions(markers: _buildMarkers())
-            ],
+    return Stack(
+      children: [
+        FlutterMap(
+          mapController: mapController,
+          options: MapOptions(
+              allowPanningOnScrollingParent: false,
+              minZoom: 8,
+              maxZoom: 18,
+              zoom: 15,
+              center: widget.mapMarkers[0].location),
+          layers: [
+            TileLayerOptions(
+                urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
+            PolylineLayerOptions(polylines: [
+              Polyline(
+                  points: widget.points,
+                  color: const Color(0xFFCB0303),
+                  strokeWidth: 2.0)
+            ]),
+            MarkerLayerOptions(markers: _buildMarkers())
+          ],
+        ),
+        Positioned(
+          left: 0,
+          right: 0,
+          bottom: 2,
+          height: MediaQuery.of(context).size.height * 0.3,
+          child: PageView.builder(
+            controller: pageController,
+            onPageChanged: (value) {
+              _animatedMapMove(widget.mapMarkers[value].location, 15);
+              setState(() => selectedIndex = value);
+            },
+            itemCount: widget.mapMarkers.length,
+            itemBuilder: (_, index) {
+              final item = widget.mapMarkers[index];
+              return Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: MapCard(item: item));
+            },
           ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 2,
-            height: MediaQuery.of(context).size.height * 0.3,
-            child: PageView.builder(
-              controller: pageController,
-              onPageChanged: (value) {
-                _animatedMapMove(widget.mapMarkers[value].location, 15);
-                setState(() => selectedIndex = value);
-              },
-              itemCount: widget.mapMarkers.length,
-              itemBuilder: (_, index) {
-                final item = widget.mapMarkers[index];
-                return Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: MapCard(item: item));
-              },
-            ),
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 

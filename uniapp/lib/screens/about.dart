@@ -5,8 +5,7 @@ class About extends StatelessWidget {
   const About({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-          body: Column(children: [
+  Widget build(BuildContext context) => Column(children: [
         appBar(context),
         Expanded(
             child: Padding(
@@ -49,5 +48,5 @@ class About extends StatelessWidget {
             ],
           ),
         ))
-      ]));
+      ]);
 }

@@ -14,13 +14,6 @@ class BNavigator extends StatefulWidget {
 }
 
 class _BNavigatorState extends State<BNavigator> {
-  List<Widget> screens = [
-    Container(),
-    Routes(),
-    News(),
-    const About(),
-  ];
-
   late PageController _pageController;
 
   @override
@@ -48,7 +41,12 @@ class _BNavigatorState extends State<BNavigator> {
                     setState(() => widget.index = index);
                   }
                 },
-                children: screens)),
+                children: [
+              Container(),
+              Routes(),
+              News(),
+              const About(),
+            ])),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: const Color(0xfe961323),

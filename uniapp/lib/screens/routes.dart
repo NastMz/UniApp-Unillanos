@@ -42,40 +42,41 @@ class _RoutesState extends State<Routes> with WidgetsBindingObserver, API {
   }
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-          body: Column(children: [
-        appBar(context),
-        isLoading
-            ? LoadWidget(message: 'Cargando el mapa, por favor espere')
-            : Expanded(
-                child: Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: markers.isNotEmpty
-                        ? SizedBox(
-                            width: double.infinity,
-                            child: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 25.0, right: 25.0, bottom: 25.0),
-                                child: Column(children: <Widget>[
-                                  DropdownButton<String>(
-                                    value: selectedItem,
-                                    items: items
-                                        .map((item) => DropdownMenuItem<String>(
-                                            value: item, child: Text(item)))
-                                        .toList(),
-                                    onChanged: (item) =>
-                                        setState(() => selectedItem = item!),
-                                    isExpanded: true,
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Expanded(
-                                      flex: 1,
-                                      child: MapWidget(
-                                        key: ValueKey(selectedItem),
-                                        points: points[selectedItem]!,
-                                        mapMarkers: markers[selectedItem]!,
-                                      ))
-                                ])))
-                        : alertBox(message: alertMessage)))
-      ]));
+  Widget build(BuildContext context) {
+    return Column(children: [
+      appBar(context),
+      isLoading
+          ? LoadWidget(message: 'Cargando el mapa, por favor espere')
+          : Expanded(
+              child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: markers.isNotEmpty
+                      ? SizedBox(
+                          width: double.infinity,
+                          child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 25.0, right: 25.0, bottom: 25.0),
+                              child: Column(children: <Widget>[
+                                DropdownButton<String>(
+                                  value: selectedItem,
+                                  items: items
+                                      .map((item) => DropdownMenuItem<String>(
+                                          value: item, child: Text(item)))
+                                      .toList(),
+                                  onChanged: (item) =>
+                                      setState(() => selectedItem = item!),
+                                  isExpanded: true,
+                                ),
+                                const SizedBox(height: 10),
+                                Expanded(
+                                    flex: 1,
+                                    child: MapWidget(
+                                      key: ValueKey(selectedItem),
+                                      points: points[selectedItem]!,
+                                      mapMarkers: markers[selectedItem]!,
+                                    ))
+                              ])))
+                      : AlertBox(message: alertMessage)))
+    ]);
+  }
 }
