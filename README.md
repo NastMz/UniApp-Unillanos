@@ -1,59 +1,75 @@
-# UniApp-Unillanos
+# UniApp Unillanos
 
-- [Resumen](#resumen)
-- [Requerimiento funcional priorizado](#requerimiento-funcional-que-se-prioriza)
-- [Metodología](#metodologia-seleccionada)
-- [Roles](#roles-y-rotacion-de-los-mismos)
-  * [Primera semana](#primera-semana)
-  * [Segunda semana](#segunda-semana)
-  * [Tercera semana](#tercera-semana)
-  * [Cuarta semana](#cuarta-semana)
+Una aplicación móvil desarrollada en Flutter para brindar información a los estudiantes de la Universidad de los Llanos sobre rutas de transporte y novedades obtenidas desde Facebook.
 
-## Resumen
+## Descripción
 
-UniApp Unillanos es una aplicación móvil que tiene el fin de brindar información a los estudiantes de la Universidad de los Llanos sobre temas como las rutas y novedades que se informen en la red social “Facebook” sobre las mismas. Esto con el fin de ayudar a la comunidad universitaria a tener una información completa de forma practica y rápida.  
+UniApp Unillanos es una aplicación móvil que tiene el fin de brindar información a los estudiantes de la Universidad de los Llanos sobre temas como las rutas y novedades que se informen en la red social "Facebook" sobre las mismas. Esto con el fin de ayudar a la comunidad universitaria a tener una información completa de forma práctica y rápida.
 
-## Requerimiento funcional que se prioriza
+## Tecnologías Utilizadas
 
-El requerimiento funcional a priorizar es "Visualizar mapas", debido a que es el más importante y el que es la base del proyecto.
+- **Flutter/Dart**: Framework principal para el desarrollo móvil
+- **Python**: Para servicios backend y APIs
+- **Docker**: Containerización
 
-## Metodologia seleccionada
+## Requisitos del Sistema
 
-La metodología que seleccionamos para el desarrollo fue xp, para asegurar un mayor control sobre el proyecto, y una implementación más efectiva y eficiente trabajando en periodos semanales, siguiendo un círculo de tareas a realizar. Este ciclo de desarrollo se basa en pruebas, análisis, diseño y desarrollo. Se utilizaron una serie de fases para la gestión del proyecto; donde, en la fase de exploración se trató de entender que era lo que necesitaba hacer el software, en la fase de planificación se estimó el esfuerzo que llevaría desarrollar el software. Actualmente nos encontramos en la fase de iteraciones, la cual se trata de crear una solución para el desarrollo de la aplicación. Por último, se encuentra la fase de producción, la cual consiste en entregar el producto final al cliente. Todo este proceso de fases es el ciclo de vida, el cual es dinámico.
+### Para Desarrollo
+- Flutter SDK
+- Dart SDK
+- Android Studio o VS Code
+- Python 3.x
+- Git
 
-Estos ciclos de desarrollo son llamados iteraciones los cuales generan nuestros entregables funcionales, donde cada iteración se realizará los 4 aspectos mencionados con anterioridad. Se llegó a hacer entre 5 y 10 iteraciones.
+### Para Usuarios
+- Android 5.0+ o iOS 11.0+
+- Conexión a internet
 
-Siguiendo esto en el ámbito de planificación se realizaron reuniones semanales donde se discutieron diversos temas como problemas del software y sus posibles soluciones.
+## Instalación
 
-En el ámbito de diseño se realizaron esas soluciones tipo spike y usando recodificación.
+### Clonar el Repositorio
+```bash
+git clone https://github.com/NastMz/UniApp-Unillanos.git
+cd UniApp-Unillanos
+```
 
-En el ámbito de desarrollo se están realizando integraciones permanentes, apoyo colectivo en términos de Código y programación en pares.
+### Configurar Flutter
+```bash
+flutter doctor
+flutter pub get
+```
 
-Finalmente, en el ámbito de pruebas se espera realizar pruebas unitarias y de aceptación, con detección y corrección de errores.
+### Configurar Backend (si aplica)
+```bash
+pip install -r requirements.txt
+```
 
+## Ejecución
 
-## Roles y rotacion de los mismos
+```bash
+# Ejecutar la aplicación
+flutter run
 
-### Primera semana:
-- Kevin Martínez: Desarrollador
-- Pablo Bobadilla: Desarrollador
-- Mateo Granada: Desarrollador
-- Camilo Tejeiro: Desarrollador
+# Ver dispositivos disponibles
+flutter devices
+```
 
-### Segunda Semana:
-- Kevin Martínez: QA/Pruebas
-- Pablo Bobadilla: QA/Pruebas
-- Mateo Granada: Desarrollador
-- Camilo Tejeiro: Desarrollador 
+## Objetivo del Proyecto
 
-### Tercera Semana:
-- Kevin Martínez: Desarrollador
-- Pablo Bobadilla: Desarrollador
-- Mateo Granada: QA/Pruebas
-- Camilo Tejeiro: QA/Pruebas
+Esta aplicación busca centralizar información importante para los estudiantes de la Universidad de los Llanos, específicamente:
 
-### Cuarta Semana:
-- Kevin Martínez: Desarrollador
-- Pablo Bobadilla: QA/Pruebas
-- Mateo Granada: Desarrollador
-- Camilo Tejeiro: QA/Pruebas
+- **Información de rutas de transporte universitario**
+- **Novedades y comunicados desde Facebook institucional**
+- **Acceso rápido y práctico a información universitaria**
+
+## Estructura del Proyecto
+
+```
+UniApp-Unillanos/
+├── lib/                # Código Flutter/Dart
+├── android/           # Configuración Android
+├── ios/              # Configuración iOS
+├── [backend]/        # Servicios Python (si existen)
+├── Dockerfile        # Configuración Docker
+└── pubspec.yaml      # Dependencias Flutter
+```
